@@ -8,7 +8,7 @@ from django.shortcuts import get_object_or_404
 from posts.models import Post, Group, Follow, Comment
 from .serializers import PostSerializer, GroupSerializer
 from .serializers import FollowSerializer, CommentSerializer
-from .permissions import IsAuthorOrReadOnly, IsNotAlreadyFollowing
+from .permissions import IsAuthorOrReadOnly
 
 
 class PostViewSet(viewsets.ModelViewSet):
