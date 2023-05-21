@@ -3,6 +3,7 @@ from rest_framework.validators import UniqueTogetherValidator
 from rest_framework.relations import SlugRelatedField
 from posts.models import Group, Follow, Post, Comment
 from django.contrib.auth import get_user_model
+
 User = get_user_model()
 
 
@@ -20,7 +21,7 @@ class CommentSerializer(serializers.ModelSerializer):
 
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
-        fields = ("id", "title", "slug", "description")
+        fields = ('id', 'title', 'slug', 'description')
         model = Group
 
 
